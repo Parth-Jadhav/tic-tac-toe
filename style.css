@@ -1,0 +1,12 @@
+body{
+    margin:0;
+    padding: 2%;
+
+}
+
+form
+{
+    width:30%;
+    border: 1px solid;
+    padding: 20px;
+}

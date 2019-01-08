@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- <div class="form"  method="POST">
+        <input type="text" name="username" placeholder="username" id="username"><br/><br/>
+        <input type="password" name="password" placeholder="password" id="password"><br/><br/>
+        <button type="submit" onclick="othername()">Submit</button>
+    </div> -->
+
+    <div id='signup'>
+        <label>Username</label>
+        <input type='text' id='username' /><br/><br/>
+        <label>Password</label>
+        <input type='password' id='password' /><br/><br/>
+        <input type='submit' value='submit'/>
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+$(document).ready(function(){
+ $.getJSON("db.json",function(jsonData){
+console.log(jsonData)
+// $("#username").on("keyup change", function() {
+// a =  (this.value);
+// console.log(a)
+// });
+
+$.each(jsonData, function(i,f) {
+                $("#username").on("submit change", function(){
+                        var people = [];
+                        console.log(f.username)
+                        if(f.username == "parth.jadhav" )
+                        {
+                            console.log(f.username)
+                        }
+
+                        else{
+                            console.log("PLease try again later")
+                        }
+                        // var tblRow = "<tr>" + "<td>" + f[0].firstName + "</td>" + "<td>" + f[0].lastName + "</td>" + "<td>" + f[0].job + "</td>" + "<td>" + f[0].roll + "</td>" + "<td>" + f[0].roll1 + "</td>" + "</tr>"
+                        // $(tblRow).appendTo("#userdata tbody");
+                });
+                });
+});
+});
+
+
+  </script>
